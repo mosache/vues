@@ -11797,7 +11797,7 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\n#checkbox_container input {\n    display: none;\n}\n#checkbox_container label {\n    width: 100%;\n    height: 100%;\n    display: block;\n    background-color: green\n}\n", ""]);
+exports.push([module.i, "\n#checkbox_container input {\n    display: none;\n}\n#checkbox_container input+label {\n    width: 100%;\n    height: 100%;\n    display: block;\n}\n#checkbox_container input:checked+label {\n    border: 3px solid red;\n}\n", ""]);
 
 // exports
 
@@ -11946,7 +11946,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         styleObj:{
             width:this.width,
             height:this.height,
-            backgroundColor:'#f00'
         }
     }
   }
@@ -11985,7 +11984,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "type": "checkbox",
       "id": "checkbox"
     }
-  }), _vm._v(" "), _c('label')])
+  }), _vm._v(" "), _c('label', {
+    attrs: {
+      "for": "checkbox"
+    }
+  })])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
