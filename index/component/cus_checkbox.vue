@@ -28,6 +28,6 @@ export default {
         display: block;
     }
     #checkbox_container input:checked+label {
-        border: 3px solid red;
+        border: 2px solid red;
     }
 </style>
