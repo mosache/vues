@@ -1,7 +1,7 @@
 <template>
   <div id="checkbox_container" :style="styleObj">
       <input type="checkbox" id="checkbox">
-      <label></label>
+      <label for="checkbox"></label>
   </div>
 </template>
 <script>
@@ -13,7 +13,6 @@ export default {
         styleObj:{
             width:this.width,
             height:this.height,
-            backgroundColor:'#f00'
         }
     }
   }
@@ -23,10 +22,12 @@ export default {
     #checkbox_container input {
         display: none;
     }
-    #checkbox_container label {
+    #checkbox_container input+label {
         width: 100%;
         height: 100%;
         display: block;
-        background-color: green
+    }
+    #checkbox_container input:checked+label {
+        border: 3px solid red;
     }
 </style>
