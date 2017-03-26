@@ -13,12 +13,23 @@ export default {
         styleObj:{
             width:this.width,
             height:this.height,
-        }
+        },
+        myW:this.width,
+        myH:this.heigth,
     }
   }
+
 }
 </script>
 <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    #checkbox_container {
+        position: relative;
+    }
     #checkbox_container input {
         display: none;
     }
@@ -26,8 +37,16 @@ export default {
         width: 100%;
         height: 100%;
         display: block;
-    }
-    #checkbox_container input:checked+label {
         border: 3px solid red;
+    }
+    #checkbox_container input:checked+label::after {
+        content: "";
+        width: 80%;
+        height:60%;
+        border: 3px solid green;
+        border-color:  transparent transparent green  green;
+        position: absolute;
+        transform: rotateZ(-70deg);
+        box-sizing: border-box;
     }
 </style>
